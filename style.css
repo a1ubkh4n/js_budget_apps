@@ -1,0 +1,271 @@
+/*
+*** General ***
+*/
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ .clearfix::after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+
+ body {
+   color: #555;
+   font-family: Open Sans;
+   font-size: 16px;
+   position: relative;
+   height: 100vh;
+   font-weight: 400;
+ }
+
+ .right {  float: right; }
+ .red { color: #ff5049 !important; }
+ .red-focus:focus { border: 1px solid #ff5049 !important; }
+
+ /*
+ ***** Top Part *****
+ */
+
+ .top {
+   height: 350px;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   }
+
+ .budget {
+   position: absolute;
+   width: 50%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #fff;
+ }
+
+ .budget-title {
+   font-size: 1.2rem;
+   text-align: center;
+   margin-bottom: 1.5%;
+   font-weight: 300;
+ }
+
+ .budget-value {
+   font-weight: 300;
+   font-size: 3rem;
+   text-align: center;
+   margin-bottom: 2%;
+   letter-spacing: 2px;
+ }
+
+ .budget-income,
+ .budget-expenses {
+   width: 100%;
+   padding: 4%;
+   text-align: center;
+   text-transform: uppercase;
+ }
+
+ .budget-income {
+   margin-bottom: 1%;
+   background-color: #28b9b5;
+ }
+
+ .budget-expenses {
+   background-color: #ff5049;
+ }
+
+ .budget-income-text,
+ .budget-expenses-text {
+   float: left;
+   font-size: 1rem;
+   color: #444;
+   margin-top: 0.5%;
+ }
+
+ .budget-income-value,
+ .budget-expenses-value {
+   letter-spacing: 1px;
+   float: left;
+ }
+
+ .budget-income-percentage,
+ .budget-expenses-percentage {
+  float: right;
+  width: 25px;
+  font-size: 0.6rem;
+  padding: 5px 0;
+  margin-left: 8px;
+ }
+
+ .budget-expenses-percentage {
+   background-color: rgba(155, 255, 163, 0.2);
+   text-align: center;
+   border-radius: 1px;
+ }
+
+
+ /* 
+ ***** Bottom Part *******
+ */
+ 
+ /* FORM */
+
+ .add {
+   padding: 2%;
+  
+   background-color: #f7f7f7;
+   border-bottom: 1px solid #e7e7e7;
+ }
+
+ .add-container {
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ .add-type {
+   background: #ffffff;
+   width: 8%;
+   padding: 1%;
+   border: 1px solid #e7e7e7;
+   height: 7.5%;
+   font-size: 1rem;
+   color: inherit;
+   margin-right: 1%;
+   font-weight: 300;
+   transition: border 0.3s;
+ }
+
+ .add-description,
+ .add-value {
+   border: 1px solid #e7e7e7;
+   background-color: #ffffff;
+   color: inherit;
+   font-size: 1rem;
+   height: 7.5%;
+   padding: 1% 1.1%;
+   margin-right: 1%;
+   border-radius: 5px;
+   transition: border 0.3s
+}
+
+.add-description { width: 55%; }
+.add-value { width: 25%; }
+
+.add-btn {
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #28b9b5;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.1;
+  margin-left: 1%;
+}
+
+.add-btn:active { transform: translateY(2px) }
+
+.add-type:focus,
+.add-description:focus,
+.add-value:focus {
+  outline: none;
+  border: 1px solid #28b9b5;
+}
+
+.add-btn:focus { outline: none }
+
+/* 
+***** LISTS ******
+*/
+
+.container {
+  width: 100%;
+  margin: 5% 5%;
+}
+
+.income {
+  float: left;
+  width: 45%;
+  margin-right: 15px;
+}
+
+.expenses {
+  float: left;
+  width: 45%;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.income-title { color: #28b9b5; }
+.expenses-title{ color: #ff5049; }
+
+.item {
+  padding: 4%;
+  border-bottom: 1px solid #e7e7e7;
+}
+.item:first-child{ border-top: 1px solid #e7e7e7; }
+.item:nth-child(even) { background-color: #f7f7f7; }
+
+.item-description {
+  float: left;
+}
+
+.item-value {
+  float: left;
+  transition: transform 0.3s;
+}
+
+.item-percentage {
+  float: left;
+  margin-left: 6px;
+  transition: transform 0.3s;
+  font-size: 0.65rem;
+  background-color: #ffdad9;
+  padding: 3px;
+  border-radius: 3px;
+  width: 25px;
+  text-align: center;
+}
+
+.income .item-value,
+.income .item-delete-btn {
+  color: #28b9b5;
+}
+
+.expenses .item-value, 
+.expenses .item-percentage,
+.expenses .item-delete-btn {
+  color: #ff5049;
+}
+
+.item-delete {
+  float: left;
+}
+
+.item-delete-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
+}
+
+.item-delete-btn:focus { outline: none }
+.item-delete-btn:active { transform: translateY(10%); }
+
+.item:hover .item-delete-btn { display: block; }
+.item:hover .item-value { transform: translateX(-30%); }
+.item:hover .item-percentage { transform: translateX(-20%) }
