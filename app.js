@@ -247,12 +247,19 @@ var controller = (function(budgetCtrl, UICtrl) {
    // Clear the fields
     UICtrl.clearFields();
 
-    // Calculate the budget 
+    // Calculate & update budget in the UI
     updateBudget();
-    // display the budget on the UI
-
+    // Calculate and update pencentage in the UI
+    updatePercentages(); 
     }
+  };
 
+  var updatePercentages = function() {
+    // Calculate percentages
+    
+    // Read percentages from budget controller
+
+    // Update the UI with percentages
   };
 
   var ctrlDeleteItem = function(event) {
@@ -267,7 +274,7 @@ var controller = (function(budgetCtrl, UICtrl) {
 
       // Delete the item from data structure 
       budgetCtrl.deleteItem(type, ID);
-       
+
       // Delete the item from UI
       UICtrl.deleteListItem(itemID);
 
