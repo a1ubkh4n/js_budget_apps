@@ -230,8 +230,6 @@ var UIController = (function() {
       });
 
       fieldsArray[0].focus();
-
-
     },
 
     displayBudget: function(obj) {
