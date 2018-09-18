@@ -129,7 +129,7 @@
 
  .add-type {
    background: #ffffff;
-   width: 8%;
+   width: 5%;
    padding: 1%;
    border: 1px solid #e7e7e7;
    height: 7.5%;
@@ -154,7 +154,7 @@
 }
 
 .add-description { width: 55%; }
-.add-value { width: 25%; }
+.add-value { width: 30%; }
 
 .add-btn {
   font-size: 2.5rem;
